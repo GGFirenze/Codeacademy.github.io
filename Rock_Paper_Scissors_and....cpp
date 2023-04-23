@@ -1,6 +1,6 @@
 /*
-Rock Paper Scissors Lizard Spock 🤌🏼🤌🏼🤌🏼
-(The Big Bang Theory but Italianised)
+Rock Paper Scissors Lizard Spock
+(The Big Bang Theory)
 */
 
 #include <iostream>
@@ -8,12 +8,13 @@ Rock Paper Scissors Lizard Spock 🤌🏼🤌🏼🤌🏼
  
 int main() {
  
+  // Live long and prosper
  srand(time(NULL));
  int computer = rand() % 4 + 1;
  int user = 0;
 
 std::cout << "====================\n";
-std::cout << "rock🏔️ paper📄 scissors✂ or...🤌🏼🤌🏼🤌🏼!\n";
+std::cout << "rock🏔️ paper📄 scissors✂️ or...🤌🏼🤌🏼🤌🏼!\n";
 std::cout << "====================\n";
  
 std::cout << "1) ✊\n";
@@ -21,7 +22,7 @@ std::cout << "2) ✋\n";
 std::cout << "3) ✌\n";
 std::cout << "4) 🤌🏼🤌🏼🤌🏼\n";
  
-std::cout << "shoot! ";
+std::cout << "shoot! (Type your choice - 1 to 4 - then hit Enter) ";
 std::cin >> user;
 
 if (user == 1)
