@@ -11,7 +11,7 @@ int main() {
   if (ReturnRate >= 20.0) {
   std::cout << "You rock! Keep up with the good work!\n";
 } else if (ReturnRate > 19.0 && ReturnRate < 20.0){
-  std::cout << "Come one, dude! Almost there, don't give up now!";
+  std::cout << "Come on, dude! Almost there, don't give up now!";
 } else {
   std::cout << "Sell this survey as there is no tomorrow! Sooner or later this numbers will go up! Also, your line managers suck!";
 }
