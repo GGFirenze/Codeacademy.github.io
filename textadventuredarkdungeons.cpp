@@ -43,7 +43,7 @@ std::cout << "Do you want to practice before we start? Practicing will increase 
 std::cin >> practice;
 
 if (practice == 1) {
-  std::cout << "Wise choice, my boy.\n";
+  std::cout << "Wise choice, my boy!\n";
   std::cout << "Your weapon efficacy increased!\n";
   std::cout << "Your new efficacy value is now " << chosenweapon + 30 << ". \n\n";
 }
