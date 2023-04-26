@@ -54,3 +54,159 @@ if (practice == 2) {
 
 
 }
+
+/* Piece of code to improve initial choice or just choices moving forward*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string choice;
+    bool validChoice = false;
+
+    while (!validChoice) {
+        cout << "Choose an item from the following list:\n";
+        cout << "1. Sword\n";
+        cout << "2. Shield\n";
+        cout << "3. Potion\n";
+        cout << "4. Staff\n";
+        cout << "Enter the number of your choice: ";
+        cin >> choice;
+
+        if (choice == "1" || choice == "2" || choice == "3" || choice == "4") {
+            validChoice = true;
+        } else {
+            cout << "Invalid choice. Please enter a number between 1 and 4.\n";
+        }
+    }
+
+    cout << "You chose item " << choice << ".\n";
+
+    return 0;
+}
+
+// Training proposal
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string weapon;
+    int efficacy = 0;
+
+    cout << "Choose a weapon from the following list:\n";
+    cout << "1. Sword (efficacy: 50)\n";
+    cout << "2. Shield (efficacy: 30)\n";
+    cout << "3. Potion (efficacy: 20)\n";
+    cout << "4. Staff (efficacy: 40)\n";
+    cout << "Enter the number of your choice: ";
+    string choice;
+    cin >> choice;
+
+    if (choice == "1") {
+        weapon = "Sword";
+        efficacy = 50;
+    } else if (choice == "2") {
+        weapon = "Shield";
+        efficacy = 30;
+    } else if (choice == "3") {
+        weapon = "Potion";
+        efficacy = 20;
+    } else if (choice == "4") {
+        weapon = "Staff";
+        efficacy = 40;
+    } else {
+        cout << "Invalid choice. Please try again.\n";
+        return 0;
+    }
+
+    cout << "You chose " << weapon << " (efficacy: " << efficacy << ").\n";
+    cout << "Do you want to get trained on using " << weapon << "? (yes or no): ";
+    string response;
+    cin >> response;
+
+    if (response == "yes") {
+        efficacy += 50;
+        cout << "Great! Your " << weapon << " efficacy increased by 50.\n";
+    } else {
+        cout << "OK, you did not choose to get trained.\n";
+    }
+
+    cout << "Your final " << weapon << " efficacy is " << efficacy << ".\n";
+
+    return 0;
+}
+
+// battle scenario
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    // Choose weapon and train
+    string weapon;
+    int efficacy = 0;
+
+    cout << "Choose a weapon from the following list:\n";
+    cout << "1. Sword (efficacy: 50)\n";
+    cout << "2. Shield (efficacy: 30)\n";
+    cout << "3. Potion (efficacy: 20)\n";
+    cout << "4. Staff (efficacy: 40)\n";
+    cout << "Enter the number of your choice: ";
+    string choice;
+    cin >> choice;
+
+    if (choice == "1") {
+        weapon = "Sword";
+        efficacy = 50;
+    } else if (choice == "2") {
+        weapon = "Shield";
+        efficacy = 30;
+    } else if (choice == "3") {
+        weapon = "Potion";
+        efficacy = 20;
+    } else if (choice == "4") {
+        weapon = "Staff";
+        efficacy = 40;
+    } else {
+        cout << "Invalid choice. Please try again.\n";
+        return 0;
+    }
+
+    cout << "You chose " << weapon << " (efficacy: " << efficacy << ").\n";
+    cout << "Do you want to get trained on using " << weapon << "? (yes or no): ";
+    string response;
+    cin >> response;
+
+    if (response == "yes") {
+        efficacy += 50;
+        cout << "Great! Your " << weapon << " efficacy increased by 50.\n";
+    } else {
+        cout << "OK, you did not choose to get trained.\n";
+    }
+
+    cout << "Your final " << weapon << " efficacy is " << efficacy << ".\n";
+
+    // Battle
+    srand(time(0)); // Seed the random number generator with the current time
+    int enemyEfficacy = rand() % 51 + 50; // Random efficacy between 50 and 100
+
+    cout << "You encounter an enemy with an efficacy of " << enemyEfficacy << ".\n";
+
+    if (efficacy > enemyEfficacy) {
+        cout << "Congratulations! You defeated the enemy with your " << weapon << ".\n";
+    } else if (efficacy < enemyEfficacy) {
+        cout << "Unfortunately, the enemy was too powerful for your " << weapon << ". You have been defeated.\n";
+    } else {
+        cout << "The battle was evenly matched, but ultimately inconclusive.\n";
+    }
+
+    return 0;
+}
